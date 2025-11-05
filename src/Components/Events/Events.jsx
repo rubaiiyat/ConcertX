@@ -1,41 +1,48 @@
 import React from "react";
 import EventsBanner from "./EventBanner";
+import Event from "./Event";
 
 const events = [
   {
     name: "Ed Sheeran Live",
     date: "Dec 15, 2025",
     venue: "Madison Square Garden, NY",
+    description: "Join Ed Sheeran for an unforgettable night of music.",
     image:
-      "https://images.unsplash.com/photo-1526378725487-1ec54e6d9a3a?auto=format&fit=crop&w=800&q=80",
+      "https://i.pinimg.com/1200x/b9/45/42/b94542cef2e059c008fd971d17416be0.jpg",
   },
   {
     name: "BTS World Tour",
     date: "Jan 20, 2026",
     venue: "Seoul Olympic Stadium, Seoul",
+    description: "The ultimate K-pop experience with BTS.",
     image:
-      "https://images.unsplash.com/photo-1603808033198-cbd7f5f7f7d0?auto=format&fit=crop&w=800&q=80",
+      "https://i.pinimg.com/736x/ee/93/21/ee9321c9611296fd29fb7e56ece78a02.jpg",
   },
   {
     name: "Adele Live",
     date: "Feb 10, 2026",
     venue: "The O2 Arena, London",
+    description: "Experience the soulful voice of Adele live in concert.",
     image:
-      "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=800&q=80",
+      "https://i.pinimg.com/1200x/b4/91/6b/b4916b3929e2583237eacf2d5a055139.jpg",
   },
   {
     name: "Metallica Concert",
     date: "Mar 5, 2026",
     venue: "Wembley Stadium, London",
+    description: "Get ready to rock with Metallica's electrifying performance.",
+
     image:
-      "https://images.unsplash.com/photo-1595152772835-219674b2a8a2?auto=format&fit=crop&w=800&q=80",
+      "https://i.pinimg.com/1200x/11/af/88/11af88a8650a21f860778b4a2b6475ed.jpg",
   },
   {
     name: "Jazz Nights",
     date: "Apr 12, 2026",
     venue: "Blue Note Jazz Club, NYC",
+    description: "An evening of smooth jazz with top artists.",
     image:
-      "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=800&q=80",
+      "https://i.pinimg.com/1200x/21/0f/0e/210f0ef72578c091278659c49e46cd66.jpg",
   },
 ];
 
@@ -48,23 +55,7 @@ const Events = () => {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {events.map((event, idx) => (
-          <div
-            key={idx}
-            className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer"
-          >
-            <div className="h-56 w-full overflow-hidden">
-              <img
-                src={event.image}
-                alt={event.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="p-4 text-center">
-              <h3 className="text-xl font-bold">{event.name}</h3>
-              <p className="text-gray-500 dark:text-gray-400">{event.date}</p>
-              <p className="text-gray-500 dark:text-gray-400">{event.venue}</p>
-            </div>
-          </div>
+          <Event key={idx} event={event}></Event>
         ))}
       </div>
     </div>
