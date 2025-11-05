@@ -5,11 +5,11 @@ const Banner = () => {
   return (
     <div className="space-y-7" style={{ fontFamily: "'Bebas Neue', cursive" }}>
       <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center">
-        <span className="bg-gradient-to-tr from-[#25e26a] via-[#1fb6e0] to-[#4588f4] text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-[#25e26a] via-[#1fb6e0] to-[#4588f4] text-transparent bg-clip-text">
           Enjoy
         </span>{" "}
         Your Favorite Music at <br /> The Best{" "}
-        <span className="bg-gradient-to-tr from-[#25e26a] via-[#1fb6e0] to-[#4588f4] text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-[#25e26a] via-[#1fb6e0] to-[#4588f4] text-transparent bg-clip-text">
           Concerts
         </span>{" "}
       </h1>
