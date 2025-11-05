@@ -11,7 +11,7 @@ const Footer = () => {
         <Link to={"/contact"} className="link link-hover">
           Contact
         </Link>
-        <Link to={"'/partners"} className="link link-hover">
+        <Link to={"/partners"} className="link link-hover">
           Partners
         </Link>
         <Link to={"/sponsors"} className="link link-hover">

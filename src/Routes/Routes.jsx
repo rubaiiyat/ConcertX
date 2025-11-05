@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router";
 import App from "../App";
 import Home from "../Components/Pages/Home/Home";
+import SponsorSlider from "../Components/Pages/Home/SponsorSlider";
+import Events from "../Components/Events/Events";
 
 const Routes = createBrowserRouter([
   {
@@ -13,7 +15,7 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/events",
-        element: <div>Events</div>,
+        element: <Events></Events>,
       },
       {
         path: "/my-bookings",
@@ -30,6 +32,14 @@ const Routes = createBrowserRouter([
       {
         path: "/about",
         element: <div>About</div>,
+      },
+      {
+        path: "/sponsors",
+        element: <SponsorSlider></SponsorSlider>,
+      },
+      {
+        path: "/partners",
+        element: <SponsorSlider></SponsorSlider>,
       },
       {
         path: "*",

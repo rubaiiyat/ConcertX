@@ -42,7 +42,7 @@ const SponsorSlider = () => {
   return (
     <div
       style={{ fontFamily: "'Bebas Neue', cursive" }}
-      className="w-full py-10 bg-base-200 shadow "
+      className="w-full py-10 bg-base-200 shadow mt-10"
     >
       <h2 className="text-3xl font-bold text-center mb-8">Our Sponsors</h2>
       <Swiper
