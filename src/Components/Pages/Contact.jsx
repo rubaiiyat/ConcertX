@@ -11,7 +11,10 @@ import {
 
 const Contact = () => {
   return (
-    <section className="bg-base-100 text-base-content min-h-screen flex flex-col items-center justify-center py-16 px-6">
+    <section
+      style={{ fontFamily: "'Bebas Neue', cursive" }}
+      className="bg-base-100 text-base-content min-h-screen flex flex-col items-center justify-center py-16 px-6"
+    >
       {/* Header */}
       <div className="text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-bold text-accent mb-3">

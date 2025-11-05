@@ -4,6 +4,7 @@ import Home from "../Components/Pages/Home/Home";
 import SponsorSlider from "../Components/Pages/Home/SponsorSlider";
 import Events from "../Components/Events/Events";
 import Contact from "../Components/Pages/Contact";
+import About from "../Components/Pages/About";
 
 const Routes = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <div>About</div>,
+        element: <About></About>,
       },
       {
         path: "/sponsors",

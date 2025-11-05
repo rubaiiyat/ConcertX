@@ -48,7 +48,10 @@ const events = [
 
 const Events = () => {
   return (
-    <div className="mx-auto px-4">
+    <div
+      style={{ fontFamily: "'Bebas Neue', cursive" }}
+      className="mx-auto px-4"
+    >
       <EventsBanner></EventsBanner>
       <h2 className="text-4xl font-bold text-center mb-12 mt-10">
         Upcoming Events
