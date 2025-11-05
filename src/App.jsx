@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="mx-5 md:mx-18 lg:mx-24 min-h-[80vh]">
+      <div className="mx-5 md:mx-18 lg:mx-24 min-h-[80vh] mb-20">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>

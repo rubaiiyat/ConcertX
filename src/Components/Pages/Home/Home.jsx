@@ -4,6 +4,7 @@ import Slider from "./Slider";
 import SponsorSlider from "./SponsorSlider";
 import PopularGenre from "./PopularGenre";
 import UpcomingEvents from "../../Events/UpcomingEvents";
+import BannerBottom from "./BannerBottom";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <SponsorSlider></SponsorSlider>
       <PopularGenre></PopularGenre>
       <UpcomingEvents></UpcomingEvents>
+      <BannerBottom></BannerBottom>
     </div>
   );
 };
