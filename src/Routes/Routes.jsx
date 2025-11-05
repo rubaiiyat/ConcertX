@@ -3,6 +3,7 @@ import App from "../App";
 import Home from "../Components/Pages/Home/Home";
 import SponsorSlider from "../Components/Pages/Home/SponsorSlider";
 import Events from "../Components/Events/Events";
+import Contact from "../Components/Pages/Contact";
 
 const Routes = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <div>Contact</div>,
+        element: <Contact></Contact>,
       },
       {
         path: "/about",
