@@ -1,5 +1,6 @@
 import React from "react";
 import { FaDrum, FaGuitar, FaHeadphones, FaMicrophone } from "react-icons/fa";
+import { Link } from "react-router";
 
 const events = [
   {
@@ -61,7 +62,6 @@ const UpcomingEvents = () => {
               key={idx}
               className="flex flex-col md:flex-row rounded-xl shadow-lg overflow-hidden transition transform hover:scale-[1.01]  bg-base-200"
             >
-              {/* Left Side: Date + Info */}
               <div className="flex flex-col justify-between p-4 md:flex-1">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
@@ -77,7 +77,6 @@ const UpcomingEvents = () => {
                 </div>
               </div>
 
-              {/* Right Side: Fixed Image */}
               <div className=" w-full md:w-48 h-48 md:h-48 overflow-hidden">
                 <img
                   src={event.image}
@@ -88,6 +87,14 @@ const UpcomingEvents = () => {
             </div>
           );
         })}
+      </div>
+      <div className="mt-5 flex justify-center">
+        <Link
+          to="/events"
+          className="btn btn-dash btn-accent text-base md:text-xl"
+        >
+          View All Events
+        </Link>
       </div>
     </div>
   );
