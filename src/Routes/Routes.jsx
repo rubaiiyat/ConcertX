@@ -6,6 +6,7 @@ import Events from "../Components/Events/Events";
 import Contact from "../Components/Pages/Contact";
 import About from "../Components/Pages/About";
 import News from "../Components/News/News";
+import MyBookings from "../Components/UserProfile/MyBookings";
 
 const Routes = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/my-bookings",
-        element: <div>My Bookings</div>,
+        element: <MyBookings></MyBookings>,
       },
       {
         path: "/news",
