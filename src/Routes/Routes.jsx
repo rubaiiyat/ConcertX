@@ -5,6 +5,7 @@ import SponsorSlider from "../Components/Pages/Home/SponsorSlider";
 import Events from "../Components/Events/Events";
 import Contact from "../Components/Pages/Contact";
 import About from "../Components/Pages/About";
+import News from "../Components/News/News";
 
 const Routes = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/news",
-        element: <div>News</div>,
+        element: <News></News>,
       },
       {
         path: "/contact",
