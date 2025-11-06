@@ -72,7 +72,7 @@ const News = () => {
         {newsData.map((news, index) => (
           <motion.div
             key={news.id}
-            className={`flex flex-col md:flex-row items-center bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-shadow duration-300 ${
+            className={`flex flex-col md:flex-row items-center bg-base-300 rounded-xl shadow-md overflow-hidden transition-shadow duration-300 ${
               index % 2 !== 0 ? "md:flex-row-reverse" : ""
             }`}
             initial={{ opacity: 0, y: 50 }}
@@ -86,16 +86,12 @@ const News = () => {
               className="w-full md:w-1/2 h-64 object-cover"
             />
             <div className="p-6 md:w-1/2">
-              <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-2">
+              <div className="flex justify-between text-sm text-accent mb-2">
                 <span className="font-semibold">{news.category}</span>
                 <span>{news.date}</span>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                {news.title}
-              </h2>
-              <p className="text-gray-700 dark:text-gray-300">
-                {news.description}
-              </p>
+              <h2 className="text-2xl font-bold  mb-4">{news.title}</h2>
+              <p className="">{news.description}</p>
             </div>
           </motion.div>
         ))}
