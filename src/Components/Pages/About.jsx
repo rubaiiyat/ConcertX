@@ -1,5 +1,6 @@
 import React from "react";
 import { Music, Users, Star, Calendar } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
@@ -7,6 +8,9 @@ const About = () => {
       style={{ fontFamily: "'Bebas Neue', cursive" }}
       className="bg-base-100 text-base-content min-h-screen flex flex-col items-center py-16 px-6"
     >
+      <Helmet>
+        <title>About | ConcertX</title>
+      </Helmet>
       {/* Hero Section */}
       <div className="text-center max-w-3xl mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-accent mb-4">

@@ -8,6 +8,7 @@ import {
   Instagram,
   Twitter,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   return (
@@ -15,6 +16,9 @@ const Contact = () => {
       style={{ fontFamily: "'Bebas Neue', cursive" }}
       className="bg-base-100 text-base-content min-h-screen flex flex-col items-center justify-center py-16 px-6"
     >
+      <Helmet>
+        <title>Contact | ConcertX</title>
+      </Helmet>
       {/* Header */}
       <div className="text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-bold text-accent mb-3">

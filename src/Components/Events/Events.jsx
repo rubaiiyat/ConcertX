@@ -1,6 +1,7 @@
 import React from "react";
 import EventsBanner from "./EventBanner";
 import Event from "./Event";
+import { Helmet } from "react-helmet-async";
 
 const events = [
   {
@@ -52,6 +53,9 @@ const Events = () => {
       style={{ fontFamily: "'Bebas Neue', cursive" }}
       className="mx-auto px-4"
     >
+      <Helmet>
+        <title>Events | ConcertX</title>
+      </Helmet>
       <EventsBanner></EventsBanner>
       <h2 className="text-4xl font-bold text-center mb-12 mt-10">
         Upcoming Events
