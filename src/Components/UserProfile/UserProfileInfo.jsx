@@ -3,7 +3,10 @@ import { CiLogout } from "react-icons/ci";
 import { FaCartPlus, FaCloudDownloadAlt } from "react-icons/fa";
 import { MdBrowserUpdated, MdManageHistory } from "react-icons/md";
 import { NavLink, Outlet } from "react-router";
+
 const UserProfileInfo = () => {
+  const activeClass = "text-accent font-semibold";
+
   return (
     <div className="">
       <div className="min-h-screen bg-base-200 flex flex-col md:flex-row">
@@ -23,25 +26,36 @@ const UserProfileInfo = () => {
           </p>
 
           {/* Nav Links */}
-          <ul className="menu w-full text-base ">
+          <ul className="menu w-full text-base">
             <li>
-              <NavLink to={"my-cart"}>
+              <NavLink
+                to={"my-cart"}
+                className={({ isActive }) => (isActive ? activeClass : "")}
+              >
                 <FaCartPlus /> My Cart
               </NavLink>
             </li>
             <li>
-              <NavLink to={"payment-history"}>
-                <MdManageHistory />
-                Payment History
+              <NavLink
+                to={"payment-history"}
+                className={({ isActive }) => (isActive ? activeClass : "")}
+              >
+                <MdManageHistory /> Payment History
               </NavLink>
             </li>
             <li>
-              <NavLink to={"download-ticket"}>
+              <NavLink
+                to={"download-ticket"}
+                className={({ isActive }) => (isActive ? activeClass : "")}
+              >
                 <FaCloudDownloadAlt /> Download Ticket
               </NavLink>
             </li>
             <li>
-              <NavLink to={"update-profile"}>
+              <NavLink
+                to={"update-profile"}
+                className={({ isActive }) => (isActive ? activeClass : "")}
+              >
                 <MdBrowserUpdated /> Update Profile
               </NavLink>
             </li>
@@ -53,6 +67,7 @@ const UserProfileInfo = () => {
             </li>
           </ul>
         </div>
+
         <div className="flex-1 p-8">
           <Outlet />
         </div>

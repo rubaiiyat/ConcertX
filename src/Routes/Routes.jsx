@@ -8,6 +8,7 @@ import About from "../Components/Pages/About";
 import News from "../Components/News/News";
 import MyBookings from "../Components/UserProfile/MyBookings";
 import UserProfile from "../Components/UserProfile/UserProfile";
+import MyCarts from "../Components/UserProfile/MyCart/MyCarts";
 
 const Routes = createBrowserRouter([
   {
@@ -53,7 +54,7 @@ const Routes = createBrowserRouter([
         children: [
           {
             path: "my-cart",
-            element: <div>My Cart</div>,
+            element: <MyCarts></MyCarts>,
           },
           {
             path: "payment-history",
