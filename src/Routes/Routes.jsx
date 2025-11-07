@@ -10,6 +10,7 @@ import MyBookings from "../Components/UserProfile/MyBookings";
 import UserProfile from "../Components/UserProfile/UserProfile";
 import MyCarts from "../Components/UserProfile/MyCart/MyCarts";
 import PaymentHistory from "../Components/UserProfile/PaymentHistory/PaymentHistory";
+import DownloadTicket from "../Components/UserProfile/DownloadTicket/DownloadTicket";
 
 const Routes = createBrowserRouter([
   {
@@ -63,7 +64,7 @@ const Routes = createBrowserRouter([
           },
           {
             path: "download-ticket",
-            element: <div>Download Ticket</div>,
+            element: <DownloadTicket></DownloadTicket>,
           },
           {
             path: "update-profile",
