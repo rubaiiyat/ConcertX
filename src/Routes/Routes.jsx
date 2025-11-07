@@ -11,6 +11,7 @@ import UserProfile from "../Components/UserProfile/UserProfile";
 import MyCarts from "../Components/UserProfile/MyCart/MyCarts";
 import PaymentHistory from "../Components/UserProfile/PaymentHistory/PaymentHistory";
 import DownloadTicket from "../Components/UserProfile/DownloadTicket/DownloadTicket";
+import UpdateProfile from "../Components/UserProfile/UpdateProfile/UpdateProfile";
 
 const Routes = createBrowserRouter([
   {
@@ -68,7 +69,7 @@ const Routes = createBrowserRouter([
           },
           {
             path: "update-profile",
-            element: <div>Update Profile</div>,
+            element: <UpdateProfile></UpdateProfile>,
           },
         ],
       },
