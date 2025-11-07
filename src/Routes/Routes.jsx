@@ -9,6 +9,7 @@ import News from "../Components/News/News";
 import MyBookings from "../Components/UserProfile/MyBookings";
 import UserProfile from "../Components/UserProfile/UserProfile";
 import MyCarts from "../Components/UserProfile/MyCart/MyCarts";
+import PaymentHistory from "../Components/UserProfile/PaymentHistory/PaymentHistory";
 
 const Routes = createBrowserRouter([
   {
@@ -58,7 +59,7 @@ const Routes = createBrowserRouter([
           },
           {
             path: "payment-history",
-            element: <div>Payment History</div>,
+            element: <PaymentHistory></PaymentHistory>,
           },
           {
             path: "download-ticket",

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { FaTrashAlt } from "react-icons/fa";
 
 const MyCarts = () => {
@@ -31,6 +32,9 @@ const MyCarts = () => {
 
   return (
     <div className="min-h-screen bg-base-200 p-8 font-sans">
+      <Helmet>
+        <title>User | My Cart</title>
+      </Helmet>
       <h1 className="text-4xl font-bold mb-8">My Cart</h1>
 
       <div className="overflow-x-auto">
