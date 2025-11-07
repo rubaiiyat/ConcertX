@@ -7,6 +7,7 @@ import Contact from "../Components/Pages/Contact";
 import About from "../Components/Pages/About";
 import News from "../Components/News/News";
 import MyBookings from "../Components/UserProfile/MyBookings";
+import UserProfile from "../Components/UserProfile/UserProfile";
 
 const Routes = createBrowserRouter([
   {
@@ -44,6 +45,29 @@ const Routes = createBrowserRouter([
       {
         path: "/partners",
         element: <SponsorSlider></SponsorSlider>,
+      },
+      // User Profile
+      {
+        path: "/user/profile",
+        element: <UserProfile></UserProfile>,
+        children: [
+          {
+            path: "my-cart",
+            element: <div>My Cart</div>,
+          },
+          {
+            path: "payment-history",
+            element: <div>Payment History</div>,
+          },
+          {
+            path: "download-ticket",
+            element: <div>Download Ticket</div>,
+          },
+          {
+            path: "update-profile",
+            element: <div>Update Profile</div>,
+          },
+        ],
       },
       {
         path: "*",
