@@ -1,12 +1,26 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router";
 
 const Register = () => {
+  const user = "Name";
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => console.log(data);
   return (
     <div
       style={{ fontFamily: "'Bebas Neue', cursive" }}
       className="min-h-screen flex items-center justify-center bg-base-200 py-10"
     >
+      <Helmet>
+        <title>ConcertX | Register</title>
+      </Helmet>
       <div className="bg-base-100 shadow-xl rounded-2xl p-10 w-full max-w-md">
         {/* Header */}
         <h2 className="text-3xl font-bold text-center text-accent mb-6">
@@ -14,7 +28,7 @@ const Register = () => {
         </h2>
 
         {/* Form */}
-        <form className="space-y-5">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           {/* Full Name */}
           <div>
             <label className="block text-sm font-medium mb-1">Full Name</label>
@@ -23,6 +37,7 @@ const Register = () => {
               placeholder="Enter your full name"
               className="input input-bordered w-full"
               required
+              {...register("name")}
             />
           </div>
 
@@ -35,6 +50,7 @@ const Register = () => {
               type="file"
               accept="image/*"
               className="file-input file-input-bordered w-full"
+              {...register("image")}
             />
           </div>
 
@@ -46,6 +62,7 @@ const Register = () => {
               placeholder="Enter your email"
               className="input input-bordered w-full"
               required
+              {...register("email")}
             />
           </div>
 
@@ -57,6 +74,7 @@ const Register = () => {
               placeholder="Enter your password"
               className="input input-bordered w-full"
               required
+              {...register("password")}
             />
           </div>
 
@@ -70,6 +88,7 @@ const Register = () => {
               placeholder="Confirm your password"
               className="input input-bordered w-full"
               required
+              {...register("confirmPassword")}
             />
           </div>
           {/* Already have account */}
