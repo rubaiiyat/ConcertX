@@ -159,10 +159,10 @@ const Navbar = () => {
               className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
             >
               <li>
-                <Link to={"/user/auth/login"}>Login</Link>
+                <Link to={"/auth/login"}>Login</Link>
               </li>
               <li>
-                <Link to={"/user/auth/register"}>Register</Link>
+                <Link to={"/auth/register"}>Register</Link>
               </li>
               <li>
                 <Link to={"/user/profile"}>My Profile</Link>

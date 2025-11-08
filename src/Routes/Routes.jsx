@@ -13,6 +13,7 @@ import PaymentHistory from "../Components/UserProfile/PaymentHistory/PaymentHist
 import DownloadTicket from "../Components/UserProfile/DownloadTicket/DownloadTicket";
 import UpdateProfile from "../Components/UserProfile/UpdateProfile/UpdateProfile";
 import AdminDashboard from "../Components/Admin/AdminDashboard/AdminDashboard";
+import Register from "../Auth/Register";
 
 const Routes = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const Routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/auth/register",
+        element: <Register />,
       },
       {
         path: "/events",
