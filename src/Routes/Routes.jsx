@@ -12,6 +12,7 @@ import MyCarts from "../Components/UserProfile/MyCart/MyCarts";
 import PaymentHistory from "../Components/UserProfile/PaymentHistory/PaymentHistory";
 import DownloadTicket from "../Components/UserProfile/DownloadTicket/DownloadTicket";
 import UpdateProfile from "../Components/UserProfile/UpdateProfile/UpdateProfile";
+import AdminDashboard from "../Components/Admin/AdminDashboard/AdminDashboard";
 
 const Routes = createBrowserRouter([
   {
@@ -70,6 +71,30 @@ const Routes = createBrowserRouter([
           {
             path: "update-profile",
             element: <UpdateProfile></UpdateProfile>,
+          },
+        ],
+      },
+
+      // Admin part
+      {
+        path: "/admin/dashboard",
+        element: <AdminDashboard></AdminDashboard>,
+        children: [
+          {
+            path: "",
+            element: <div>Admin Home</div>,
+          },
+          {
+            path: "add-event",
+            element: <div>Add Event</div>,
+          },
+          {
+            path: "manage-users",
+            element: <div>Manage Users</div>,
+          },
+          {
+            path: "receives-money",
+            element: <div>Receives Money</div>,
           },
         ],
       },

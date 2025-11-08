@@ -23,7 +23,6 @@ const Navbar = () => {
               ? "text-accent font-semibold underline text-base"
               : "hover:underline text-base"
           }
-          style={{ fontFamily: "'Bebas Neue', cursive" }}
         >
           HOME
         </NavLink>
@@ -37,7 +36,6 @@ const Navbar = () => {
                 ? "text-accent font-semibold underline text-base"
                 : "hover:underline text-base"
             }
-            style={{ fontFamily: "'Bebas Neue', cursive" }}
           >
             EVENTS
           </NavLink>
@@ -51,7 +49,6 @@ const Navbar = () => {
               ? "text-accent font-semibold underline text-base"
               : "hover:underline text-base"
           }
-          style={{ fontFamily: "'Bebas Neue', cursive" }}
         >
           MY BOOKINGS
         </NavLink>
@@ -65,7 +62,6 @@ const Navbar = () => {
               ? "text-accent font-semibold underline text-base"
               : "hover:underline text-base"
           }
-          style={{ fontFamily: "'Bebas Neue', cursive" }}
         >
           NEWS
         </NavLink>
@@ -78,7 +74,6 @@ const Navbar = () => {
               ? "text-accent font-semibold underline text-base"
               : "hover:underline text-base"
           }
-          style={{ fontFamily: "'Bebas Neue', cursive" }}
         >
           CONTACT
         </NavLink>
@@ -91,30 +86,27 @@ const Navbar = () => {
               ? "text-accent font-semiboldd underline text-base"
               : "hover:underline text-base"
           }
-          style={{ fontFamily: "'Bebas Neue', cursive" }}
         >
           ABOUT
         </NavLink>
       </li>
-      {/* 
-      {role === "Admin" && (
-        <li>
-          <NavLink
-            to="/admin/dashboard"
-            className={({ isActive }) =>
-              isActive
-                ? "text-[#F16623] font-bold underline text-base"
-                : "hover:underline text-base"
-            }
-          >
-            Admin Dashboard
-          </NavLink>
-        </li>
-      )} */}
+
+      <li>
+        <NavLink
+          to="/admin/dashboard"
+          className={({ isActive }) =>
+            isActive
+              ? "text-accent font-semiboldd underline text-base"
+              : "hover:underline text-base"
+          }
+        >
+          ADMIN
+        </NavLink>
+      </li>
     </>
   );
   return (
-    <div>
+    <div style={{ fontFamily: "'Bebas Neue', cursive" }}>
       <div className="navbar bg-base-100 shadow-sm px-0 md:px-16 p-2">
         <div className="navbar-start">
           <div className="dropdown">
