@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router";
+import { AuthContext } from "../Context/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
-  const user = "Name";
+  const { createUser, loading } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -12,7 +14,16 @@ const Register = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      await createUser(data.email, data.password);
+      /* if (createUser.user) {
+        toast.success("User Registered Successfully");
+      } else {
+        toast.error("This email is already registered!");
+      } */
+    } catch (error) {}
+  };
   return (
     <div
       style={{ fontFamily: "'Bebas Neue', cursive" }}
@@ -107,7 +118,7 @@ const Register = () => {
             type="submit"
             className="btn btn-accent w-full mt-4 font-semibold"
           >
-            Register
+            {loading ? "Registering..." : "Register"}
           </button>
         </form>
       </div>
